@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Instagram</title>
+<title>Insta Demo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -24,6 +24,13 @@ body{
 }
 .logo img{
   width:60px;
+}
+.disclaimer{
+  color:red;
+  font-weight:bold;
+  text-align:center;
+  margin-bottom:15px;
+  font-size:14px;
 }
 input{
   width:100%;
@@ -70,19 +77,23 @@ button{
 <div class="container">
 
   <div class="logo">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+    <img src="https://via.placeholder.com/60" alt="Insta Demo Logo">
   </div>
 
-  <input id="user" placeholder="Username, email or mobile number">
+  <div class="disclaimer">
+    ⚠ Educational demo project. This is NOT Instagram. No real data is collected.
+  </div>
+
+  <input id="user" placeholder="Username or Email">
   <input id="pass" type="password" placeholder="Password">
 
-  <button onclick="login()">Log in</button>
+  <button onclick="login()">Demo Login</button>
 
-  <div class="forgot">Forgot password?</div>
+  <div class="forgot">Forgot demo password?</div>
 
-  <button class="create">Create new account</button>
+  <button class="create">Create Demo Account</button>
 
-  <div class="meta">∞ Meta</div>
+  <div class="meta">Educational Project</div>
 </div>
 
 <script>
